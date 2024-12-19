@@ -1,3 +1,4 @@
+annotated-types==0.7.0
 asgiref==3.8.1
 blinker==1.8.2
 cachetools==5.5.0
@@ -16,11 +17,17 @@ drf-nested-routers==0.94.1
 drf-yasg==1.21.7
 Flask==3.0.3
 fonttools==4.53.1
+google-ai-generativelanguage==0.6.10
 google-api-core==2.20.0
 google-api-python-client==2.147.0
 google-auth==2.35.0
 google-auth-httplib2==0.2.0
+google-generativeai==0.8.3
 googleapis-common-protos==1.65.0
+grpcio==1.68.0
+grpcio-status==1.68.0
+gunicorn==23.0.0
+h11==0.14.0
 httplib2==0.22.0
 idna==3.10
 inflection==0.5.1
@@ -29,7 +36,7 @@ Jinja2==3.1.4
 kiwisolver==1.4.5
 MarkupSafe==2.1.5
 matplotlib==3.9.2
-numpy==2.0.1
+numpy==2.1.0
 packaging==24.1
 pillow==10.4.0
 proto-plus==1.24.0
@@ -37,6 +44,8 @@ protobuf==5.28.2
 psycopg2==2.9.9
 pyasn1==0.6.1
 pyasn1_modules==0.4.1
+pydantic==2.10.2
+pydantic_core==2.27.1
 PyJWT==2.9.0
 pyparsing==3.1.2
 python-dateutil==2.9.0.post0
@@ -50,7 +59,10 @@ scipy==1.14.1
 setuptools==75.1.0
 six==1.16.0
 sqlparse==0.5.1
+tqdm==4.67.1
+typing_extensions==4.12.2
 tzdata==2024.1
 uritemplate==4.1.1
 urllib3==2.2.3
-Werkzeug==3.0.4
+uvicorn==0.34.0
+Werkzeug==3.0.3
