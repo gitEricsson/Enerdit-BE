@@ -1,0 +1,14 @@
+.env 
+env
+env/ 
+.venv 
+venv/
+.venv/
+/.venv
+dist/ 
+lib/ 
+lib64/ 
+__pycache__
+__pycache__/
+db.sqlite3
+.vs/*
