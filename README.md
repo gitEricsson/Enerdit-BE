@@ -26,6 +26,8 @@ Enerdit Backend is the server-side component of the Enerdit application, designe
 - **PostgreSQL**: A powerful, open-source object-relational database system.
 - **Django CORS Headers**: For handling Cross-Origin Resource Sharing (CORS).
 - **Django Environ**: For managing environment variables.
+- **Gunicorn**: A Python WSGI HTTP Server for UNIX, used to serve the application.
+- **Uvicorn**: A lightning-fast ASGI server for Python, suitable for asynchronous applications.
 
 ## Installation
 
@@ -94,6 +96,25 @@ python manage.py runserver
 ```
 
 This will start the development server at `http://127.0.0.1:8000/`.
+
+### Running with Uvicorn
+
+For production, you can run the application using Uvicorn. Use the following command:
+
+```bash
+python -m uvicorn Enerdit.asgi:application --host 0.0.0.0 --port 8000
+```
+
+### Running with Gunicorn
+
+Alternatively, you can use Gunicorn to serve your application with Uvicorn workers. This is recommended for production environments. Use the following command:
+
+```bash
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker Enerdit.asgi:application --host 0.0.0.0 --port 8000
+```
+
+- `-w 4`: This option specifies the number of worker processes. Adjust this based on your server's CPU cores.
+- `-k uvicorn.workers.UvicornWorker`: This option tells Gunicorn to use Uvicorn as the worker class.
 
 ## API Endpoints
 
