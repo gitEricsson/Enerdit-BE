@@ -56,8 +56,8 @@ class SignupView(generics.GenericAPIView):
             current_site = get_current_site(request).domain
             relativeLink = reverse('email-verify') # retrieve url path
             # absurl = 'http://'+current_site+relativeLink+"?token="+str(token)
-            absurl = f"{os.environ.get("APP_BASE_URL")}/email-verify?token={str(token)}"
-            
+            absurl = f"{os.environ.get('APP_BASE_URL')}/email-verify?token={str(token)}"  
+
             email_body = f"Hi {user.name}, Welcome to the Family. We're happy you signed up for Enerdit. \n Kindly visit this Link to verify your account: {absurl}. \n If you received this mail without signing up, please ignore it!`"
             
             email_html = f"""<p>Hi {user.name},</p>
